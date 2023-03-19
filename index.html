@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Form Dengan RegEx</title>
+</head>
+<body>
+    <section class="intro">
+        <div class="mask d-flex align-items-center h-100 gradient-custom">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card">
+                  <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2">Form Data Diri</h3>
+      
+                    <form action="">
+                        <p class="mb-4" style="color: #45526e;">Silahkan isi form berikut sesuai instruksi</p>
+  
+                        <div class="form-outline mb-1">
+                          <label class="form-label" for="nama">Nama Lengkap</label>
+                          <input type="text" id="nama" name="nama" class="form-control" pattern="^[A-Za-z\s]*$" />
+                          <p id="invalid-nama" style="display:none;color:red">Isi nama dengan benar</p>
+                        </div>
+
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[gmail]+\.[com]{2,}$" class="form-control" />
+                            <p id="invalid-email" style="display:none;color:red">Isi dengan email '@gmail.com'</p>
+                          </div>
+
+                          <div class="form-outline mb-4">
+                            <label class="form-label" for="nohp">No Handphone</label>
+                            <input type="tel" id="nohp" name="nohp" pattern="[0-9]{11,12}$" class="form-control" />
+                            <p id="invalid-nohp" style="display:none;color:red">Isi dengan no handphone</p>
+                          </div>
+                          
+                          <div class="input-group mb-1">
+                            <label class="form-label mr-5" for="tb">Tinggi Badan</label>
+                            <input type="text" class="form-control" id="tb" name="tb" pattern="[0-9]{3}$">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">cm</div>
+                              </div>
+                              <br>
+                          </div>
+                          <p id="invalid-tb" style="display:none;color:red">Isi dalam centimeter</p>
+
+                          <div class="form-outline mb-4">
+                            <label class="form-label" for="ttl">Tanggal Lahir</label>
+                            <input type="text" id="ttl" name="ttl" pattern="^\d{2}-\d{2}-\d{4}$" class="form-control" />
+                            <p id="invalid-ttl" style="display:none;color:red">Isi dengan format DD-MM-YYYY</p>
+                          </div>
+      
+                          <div class="mt-4" align="center">
+                            <input class="btn btn-warning btn-lg" type="submit" value="Submit" />
+                          </div>
+      
+                        </div>
+                      </div>
+      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<script src="regex.js"></script>
+</body>
+</html>
